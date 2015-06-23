@@ -80,7 +80,7 @@
       </attribute>
       <attribute name="ClassID" visibility="private">
         <datatype>String</datatype>
-        <apicomment>De class name in HOOFDLETTERS</apicomment>
+        <apicomment>Classname in capitals</apicomment>
         <body>"${allUpper(${generated.class.name})}"</body>
       </attribute>
 	    <attribute name="LOG" visibility="private" static="true" final="true">

@@ -21,7 +21,7 @@
   </properties>
   <externalLibraries>
     <externalLibrary name="lib1">
-      <path>/Users/marnix/git/metafactory-library</path>
+      <path>../../metafactory-library</path>
       <patternsFolder>pattern</patternsFolder>
       <snippetsFolder>snippet</snippetsFolder>
     </externalLibrary>
