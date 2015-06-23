@@ -4,11 +4,15 @@
   <properties>
     <java.output.directory>src/main/java</java.output.directory>
   </properties>
-  <package name="org.metafactory.demo.example1">
-    <class name="HelloWorld">
-      
-      <operation name="main" visibility="public" static="true">
 
+  <!-- Create a java package with name org.metafactory.demo.example1 -->
+  <package name="org.metafactory.demo.example1">
+
+    <!-- Create the class HelloWorld in package org.metafactory.demo.example1 -->
+    <class name="HelloWorld">
+
+      <!-- Create 1 method with name main and the usual main parameters -->
+      <operation name="main" visibility="public" static="true">
         <apicomment>My comment (javadoc)</apicomment>
         <parameter name="args"><datatype>String[]</datatype></parameter>
         <body>System.out.println("Hello World");</body>

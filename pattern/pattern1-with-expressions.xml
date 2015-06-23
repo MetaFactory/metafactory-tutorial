@@ -15,22 +15,36 @@
     <model.implementation.fqcn>${pattern.property.model.implementation.package}.${pattern.property.model.implementation.class}</model.implementation.fqcn>
 
   </properties>
+  <!--
+  	Create a java package. The name of package is set to the expression ${pattern.property.base}. This
+  	expression is resolved by MetaFactory. Expressions starting with ${pattern.property. are used to
+  	reference a "pattern property". These properties (metadata) are defined in the properties child
+  	element of the root element of the pattern. Read more about pattern properties at:
+  	https://www.metafactory.nl/document/pattern-beschrijving/pattern-properties/
+
+  	The expression ${pattern.property.base} will be resolved to org.metafactory.demo.example1
+   -->
   <package name="${pattern.property.base}">
+
+  	<!--
+  		Create a java class. The name of this is set by the pattern property "name.of.class" which is set
+  		at line 7 in pattern.xml.
+  	 -->
     <class name="${pattern.property.name.of.class}">
       <attribute name="field1" visibility="private">
         <datatype>String</datatype>
-        <apicomment>Een string veldje</apicomment>
-        <body>"Deze waarde is ingesteld in het pattern"</body>
+        <apicomment>Some String field</apicomment>
+        <body>"Value defined in pattern"</body>
       </attribute>
       <attribute name="field2" visibility="public">
         <datatype>int</datatype>
-        <apicomment>Nog een veldje</apicomment>
+        <apicomment>Another field</apicomment>
         <body>10</body>
       </attribute>
       <attribute name="CONSTANT" visibility="public" static="true" final="true">
         <datatype>String</datatype>
-        <apicomment>Een constante</apicomment>
-        <body>"waarde"</body>
+        <apicomment>A constant field</apicomment>
+        <body>"value"</body>
       </attribute>
       <operation name="methode1" visibility="private" static="false">
         <parameter name="return"><datatype>String</datatype></parameter>
@@ -42,13 +56,13 @@
         <library>java.util.List</library>
         <parameter name="return"><datatype>String</datatype></parameter>
         <parameter name="list"><datatype><![CDATA[List<String>]]></datatype></parameter>
-        <body>return "Generic types zijn geen probleem";</body>
+        <body>return "Of course, generic types are supported";</body>
       </operation>
       <operation name="methode3" visibility="protected" static="false" >
         <library>java.util.Set</library>
-        <apicomment>Hier kan ik het javadoc commentaar opgeven</apicomment>
+        <apicomment>Set your javadoc comment</apicomment>
         <parameter name="list"><datatype><![CDATA[Set<String>]]></datatype></parameter>
-        <body>// doe iets</body>
+        <body>// do something</body>
       </operation>
 
       <operation name="main" visibility="public" static="true">
@@ -61,12 +75,12 @@
     <class name="${pattern.property.business.class}">
       <attribute name="ID" visibility="private">
         <datatype>String</datatype>
-        <apicomment>De package name</apicomment>
+        <apicomment>The package name</apicomment>
         <body>"${generated.package.name}"</body>
       </attribute>
       <attribute name="ClassID" visibility="private">
         <datatype>String</datatype>
-        <apicomment>De class name in HOOFDLETTERS</apicomment>
+        <apicomment>Classname in capitals</apicomment>
         <body>"${allUpper(${generated.class.name})}"</body>
       </attribute>
 	    <attribute name="LOG" visibility="private" static="true" final="true">
