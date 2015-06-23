@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.firstbase.nl/xsd/personaliom/model" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/model http://www.firstbase.nl/xsd/personaliom/model.xsd"
+>
+  <package name="domain_model">
+    <object name="Relation">
+    </object>
+    <object name="RelationType">
+    </object>
+    <object name="Person">
+    </object>
+    <object name="Company">
+    </object>
+    <object name="Address">
+      <properties>
+        <audit.create>true</audit.create>
+        <audit.modify>true</audit.modify>
+        <comparator.create>true</comparator.create>
+        <defaultSortColumn>streetName</defaultSortColumn>
+        <edit.page>Edit</edit.page>
+        <edit.page.Edit.columnCount>4</edit.page.Edit.columnCount>
+        <edit.page.Edit.rowCount>4</edit.page.Edit.rowCount>
+        <enum>false</enum>
+        <jsf.list.columnCount>20</jsf.list.columnCount>
+        <login.required.edit>false</login.required.edit>
+        <login.required.search>true</login.required.search>
+        <login.required.view>true</login.required.view>
+        <menu.Members>3</menu.Members>
+        <name.plural>Addresses</name.plural>
+        <reference.nn>Person.address.address</reference.nn>
+        <reference.nn>Company.address.address</reference.nn>
+        <search.seam>Search</search.seam>
+        <search.seam.Search.columnCount>2</search.seam.Search.columnCount>
+        <search.seam.Search.rowCount>8</search.seam.Search.rowCount>
+        <security.seam.target>clubmembers_admin</security.seam.target>
+        <serialVersionUID>1</serialVersionUID>
+        <view.page>View</view.page>
+        <view.page.View.columnCount>2</view.page.View.columnCount>
+        <view.page.View.rowCount>8</view.page.View.rowCount>
+        <xi18n.translated.default>false</xi18n.translated.default>
+        <xi18n.translated.en>false</xi18n.translated.en>
+      </properties>
+      <attribute name="streetName" type="String" notnull="true">
+        <properties>
+          <businesskey>2</businesskey>
+          <edit.page.Edit.row1.col1 />
+          <edit.page.Edit.row1.col1.colspan>1</edit.page.Edit.row1.col1.colspan>
+          <edit.page.Edit.row1.col1.colspan_label>1</edit.page.Edit.row1.col1.colspan_label>
+          <edit.page.Edit.row1.col1.colspan_value>1</edit.page.Edit.row1.col1.colspan_value>
+          <jsf.list.column.1 />
+          <jsf.list.column.1.renderLabelAsLink>false</jsf.list.column.1.renderLabelAsLink>
+          <jsf.list.renderLabelAsLink>false</jsf.list.renderLabelAsLink>
+          <label>1</label>
+          <search.seam.Search.row1.col1 />
+          <search.seam.Search.row1.col1.colspan>1</search.seam.Search.row1.col1.colspan>
+          <search.seam.Search.row1.col1.colspan_label>1</search.seam.Search.row1.col1.colspan_label>
+          <search.seam.Search.row1.col1.colspan_value>1</search.seam.Search.row1.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row1.col1 />
+          <view.page.View.row1.col1.colspan_label>1</view.page.View.row1.col1.colspan_label>
+          <view.page.View.row1.col1.colspan_value>1</view.page.View.row1.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="zipCode" type="String">
+        <properties>
+          <businesskey>3</businesskey>
+          <edit.page.Edit.row1.col3 />
+          <edit.page.Edit.row1.col3.colspan>1</edit.page.Edit.row1.col3.colspan>
+          <edit.page.Edit.row1.col3.colspan_label>1</edit.page.Edit.row1.col3.colspan_label>
+          <edit.page.Edit.row1.col3.colspan_value>1</edit.page.Edit.row1.col3.colspan_value>
+          <edit.page.Edit.row2.col1.colspan>1</edit.page.Edit.row2.col1.colspan>
+          <jsf.list.column.2 />
+          <jsf.list.column.2.renderLabelAsLink>false</jsf.list.column.2.renderLabelAsLink>
+          <jsf.list.renderLabelAsLink>false</jsf.list.renderLabelAsLink>
+          <label>2</label>
+          <search.seam.Search.row2.col1 />
+          <search.seam.Search.row2.col1.colspan>1</search.seam.Search.row2.col1.colspan>
+          <search.seam.Search.row2.col1.colspan_label>1</search.seam.Search.row2.col1.colspan_label>
+          <search.seam.Search.row2.col1.colspan_value>1</search.seam.Search.row2.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row2.col1 />
+          <view.page.View.row2.col1.colspan_label>1</view.page.View.row2.col1.colspan_label>
+          <view.page.View.row2.col1.colspan_value>1</view.page.View.row2.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="city" type="String" notnull="true">
+        <properties>
+          <businesskey>1</businesskey>
+          <edit.page.Edit.row2.col1 />
+          <edit.page.Edit.row2.col1.colspan>1</edit.page.Edit.row2.col1.colspan>
+          <edit.page.Edit.row2.col1.colspan_label>1</edit.page.Edit.row2.col1.colspan_label>
+          <edit.page.Edit.row2.col1.colspan_value>1</edit.page.Edit.row2.col1.colspan_value>
+          <edit.page.Edit.row3.col1.colspan>1</edit.page.Edit.row3.col1.colspan>
+          <jsf.list.column.3 />
+          <jsf.list.column.3.renderLabelAsLink>false</jsf.list.column.3.renderLabelAsLink>
+          <jsf.list.column.defaultSortColumn>ascending</jsf.list.column.defaultSortColumn>
+          <jsf.list.renderLabelAsLink>false</jsf.list.renderLabelAsLink>
+          <label>3</label>
+          <search.seam.Search.row3.col1 />
+          <search.seam.Search.row3.col1.colspan>1</search.seam.Search.row3.col1.colspan>
+          <search.seam.Search.row3.col1.colspan_label>1</search.seam.Search.row3.col1.colspan_label>
+          <search.seam.Search.row3.col1.colspan_value>1</search.seam.Search.row3.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row3.col1 />
+          <view.page.View.row3.col1.colspan_label>1</view.page.View.row3.col1.colspan_label>
+          <view.page.View.row3.col1.colspan_value>1</view.page.View.row3.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="country" type="String">
+        <properties>
+          <edit.page.Edit.row2.col3 />
+          <edit.page.Edit.row2.col3.colspan>1</edit.page.Edit.row2.col3.colspan>
+          <edit.page.Edit.row2.col3.colspan_label>1</edit.page.Edit.row2.col3.colspan_label>
+          <edit.page.Edit.row2.col3.colspan_value>1</edit.page.Edit.row2.col3.colspan_value>
+          <edit.page.Edit.row4.col1.colspan>1</edit.page.Edit.row4.col1.colspan>
+          <search.seam.Search.row4.col1 />
+          <search.seam.Search.row4.col1.colspan>1</search.seam.Search.row4.col1.colspan>
+          <search.seam.Search.row4.col1.colspan_label>1</search.seam.Search.row4.col1.colspan_label>
+          <search.seam.Search.row4.col1.colspan_value>1</search.seam.Search.row4.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row4.col1 />
+          <view.page.View.row4.col1.colspan_label>1</view.page.View.row4.col1.colspan_label>
+          <view.page.View.row4.col1.colspan_value>1</view.page.View.row4.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text">
+        <properties>
+          <edit.page.Edit.colsTextArea>80</edit.page.Edit.colsTextArea>
+          <edit.page.Edit.row3.col1 />
+          <edit.page.Edit.row3.col1.colspan_label>1</edit.page.Edit.row3.col1.colspan_label>
+          <edit.page.Edit.row3.col1.colspan_value>3</edit.page.Edit.row3.col1.colspan_value>
+          <edit.page.Edit.rowsTextArea>4</edit.page.Edit.rowsTextArea>
+          <search.seam.Search.colsTextArea>80</search.seam.Search.colsTextArea>
+          <search.seam.Search.row5.col1 />
+          <search.seam.Search.row5.col1.colspan_label>1</search.seam.Search.row5.col1.colspan_label>
+          <search.seam.Search.row5.col1.colspan_value>1</search.seam.Search.row5.col1.colspan_value>
+          <search.seam.Search.rowsTextArea>4</search.seam.Search.rowsTextArea>
+          <view.page.View.row6.col1 />
+          <view.page.View.row6.col1.colspan_label>1</view.page.View.row6.col1.colspan_label>
+          <view.page.View.row6.col1.colspan_value>1</view.page.View.row6.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="created" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Creation time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="creator" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who created this record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modified" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Modification time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modifier" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who modified this record</model.apicomment>
+        </properties>
+      </attribute>
+      <reference name="type" type="AddressType" multiplicity="1..1" notnull="true">
+        <properties>
+          <create.finder.criteria>true</create.finder.criteria>
+          <edit.page.Edit.renderLabelAsLink>true</edit.page.Edit.renderLabelAsLink>
+          <edit.page.Edit.renderLabelAsLink.toFacelet>/addressTypeEdit.xhtml</edit.page.Edit.renderLabelAsLink.toFacelet>
+          <edit.page.Edit.row4.col1 />
+          <edit.page.Edit.row4.col1.colspan_label>1</edit.page.Edit.row4.col1.colspan_label>
+          <edit.page.Edit.row4.col1.colspan_value>1</edit.page.Edit.row4.col1.colspan_value>
+          <jsf.list.column.4 />
+          <jsf.list.column.4.renderLabelAsLink>true</jsf.list.column.4.renderLabelAsLink>
+          <jsf.list.column.4.renderLabelAsLink.toFacelet>/addressTypeEdit.xhtml</jsf.list.column.4.renderLabelAsLink.toFacelet>
+          <jsf.list.renderLabelAsLink.toFacelet>/addressTypeEdit.xhtml</jsf.list.renderLabelAsLink.toFacelet>
+          <search.seam.Search.renderLabelAsLink>false</search.seam.Search.renderLabelAsLink>
+          <search.seam.Search.row6.col1 />
+          <search.seam.Search.row6.col1.colspan_label>1</search.seam.Search.row6.col1.colspan_label>
+          <search.seam.Search.row6.col1.colspan_value>1</search.seam.Search.row6.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>true</view.page.View.renderLabelAsLink>
+          <view.page.View.renderLabelAsLink.toFacelet>/addressTypeEdit.xhtml</view.page.View.renderLabelAsLink.toFacelet>
+          <view.page.View.row5.col1 />
+          <view.page.View.row5.col1.colspan_label>1</view.page.View.row5.col1.colspan_label>
+          <view.page.View.row5.col1.colspan_value>1</view.page.View.row5.col1.colspan_value>
+        </properties>
+      </reference>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties>
+        </properties>
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties>
+        </properties>
+      </reference>
+
+    </object>
+    <object name="Phone">
+      <properties>
+        <audit.create>true</audit.create>
+        <audit.modify>true</audit.modify>
+        <comparator.create>true</comparator.create>
+        <defaultSortColumn>number</defaultSortColumn>
+        <edit.page>Edit</edit.page>
+        <edit.page.Edit.columnCount>2</edit.page.Edit.columnCount>
+        <edit.page.Edit.rowCount>3</edit.page.Edit.rowCount>
+        <enum>false</enum>
+        <jsf.list.columnCount>20</jsf.list.columnCount>
+        <login.required.edit>false</login.required.edit>
+        <login.required.search>true</login.required.search>
+        <login.required.view>true</login.required.view>
+        <menu.Members>4</menu.Members>
+        <name.plural>Phones</name.plural>
+        <search.seam>Search</search.seam>
+        <search.seam.Search.columnCount>2</search.seam.Search.columnCount>
+        <search.seam.Search.rowCount>2</search.seam.Search.rowCount>
+        <security.seam.target>clubmembers_admin</security.seam.target>
+        <serialVersionUID>1</serialVersionUID>
+        <view.page>View</view.page>
+        <view.page.View.columnCount>1</view.page.View.columnCount>
+        <view.page.View.rowCount>8</view.page.View.rowCount>
+        <xi18n.translated.default>false</xi18n.translated.default>
+        <xi18n.translated.en>false</xi18n.translated.en>
+      </properties>
+      <attribute name="number" type="String" notnull="true" length="20">
+        <properties>
+          <businesskey>1</businesskey>
+          <edit.page.Edit.row1.col1 />
+          <edit.page.Edit.row1.col1.colspan>1</edit.page.Edit.row1.col1.colspan>
+          <edit.page.Edit.row1.col1.colspan_label>1</edit.page.Edit.row1.col1.colspan_label>
+          <edit.page.Edit.row1.col1.colspan_value>1</edit.page.Edit.row1.col1.colspan_value>
+          <jsf.list.column.1 />
+          <jsf.list.column.1.renderLabelAsLink>false</jsf.list.column.1.renderLabelAsLink>
+          <jsf.list.renderLabelAsLink>false</jsf.list.renderLabelAsLink>
+          <label>1</label>
+          <search.seam.Search.row1.col1 />
+          <search.seam.Search.row1.col1.colspan>1</search.seam.Search.row1.col1.colspan>
+          <search.seam.Search.row1.col1.colspan_label>1</search.seam.Search.row1.col1.colspan_label>
+          <search.seam.Search.row1.col1.colspan_value>1</search.seam.Search.row1.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row1.col1 />
+          <view.page.View.row1.col1.colspan_label>1</view.page.View.row1.col1.colspan_label>
+          <view.page.View.row1.col1.colspan_value>1</view.page.View.row1.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text" notnull="false" length="250">
+        <properties>
+          <edit.page.Edit.colsTextArea>80</edit.page.Edit.colsTextArea>
+          <edit.page.Edit.row2.col1 />
+          <edit.page.Edit.row2.col1.colspan_label>1</edit.page.Edit.row2.col1.colspan_label>
+          <edit.page.Edit.row2.col1.colspan_value>1</edit.page.Edit.row2.col1.colspan_value>
+          <edit.page.Edit.rowsTextArea>4</edit.page.Edit.rowsTextArea>
+          <jsf.list.column.2 />
+          <search.seam.Search.colsTextArea>80</search.seam.Search.colsTextArea>
+          <search.seam.Search.row2.col1 />
+          <search.seam.Search.row2.col1.colspan_label>1</search.seam.Search.row2.col1.colspan_label>
+          <search.seam.Search.row2.col1.colspan_value>1</search.seam.Search.row2.col1.colspan_value>
+          <search.seam.Search.rowsTextArea>4</search.seam.Search.rowsTextArea>
+          <view.page.View.row2.col1 />
+          <view.page.View.row2.col1.colspan_label>1</view.page.View.row2.col1.colspan_label>
+          <view.page.View.row2.col1.colspan_value>1</view.page.View.row2.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="created" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Creation time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="creator" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who created this record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modified" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Modification time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modifier" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who modified this record</model.apicomment>
+        </properties>
+      </attribute>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties>
+        </properties>
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties>
+        </properties>
+      </reference>
+    </object>
+    <object name="Email">
+      <properties>
+        <audit.create>true</audit.create>
+        <audit.modify>true</audit.modify>
+        <comparator.create>true</comparator.create>
+        <defaultSortColumn>emailAddress</defaultSortColumn>
+        <edit.page>Edit</edit.page>
+        <edit.page.Edit.columnCount>2</edit.page.Edit.columnCount>
+        <edit.page.Edit.rowCount>2</edit.page.Edit.rowCount>
+        <enum>false</enum>
+        <jsf.list.columnCount>20</jsf.list.columnCount>
+        <login.required.edit>false</login.required.edit>
+        <login.required.search>true</login.required.search>
+        <login.required.view>true</login.required.view>
+        <menu.Members>5</menu.Members>
+        <name.plural>Emails</name.plural>
+        <search.seam>Search</search.seam>
+        <search.seam.Search.columnCount>2</search.seam.Search.columnCount>
+        <search.seam.Search.rowCount>2</search.seam.Search.rowCount>
+        <security.seam.target>clubmembers_admin</security.seam.target>
+        <serialVersionUID>1</serialVersionUID>
+        <view.page>View</view.page>
+        <view.page.View.columnCount>1</view.page.View.columnCount>
+        <view.page.View.rowCount>8</view.page.View.rowCount>
+        <xi18n.translated.default>false</xi18n.translated.default>
+        <xi18n.translated.en>false</xi18n.translated.en>
+      </properties>
+      <attribute name="emailAddress" type="String" notnull="true" length="80">
+        <properties>
+          <businesskey>1</businesskey>
+          <edit.page.Edit.row1.col1 />
+          <edit.page.Edit.row1.col1.colspan>1</edit.page.Edit.row1.col1.colspan>
+          <edit.page.Edit.row1.col1.colspan_label>1</edit.page.Edit.row1.col1.colspan_label>
+          <edit.page.Edit.row1.col1.colspan_value>1</edit.page.Edit.row1.col1.colspan_value>
+          <jsf.list.column.1 />
+          <jsf.list.column.1.renderLabelAsLink>false</jsf.list.column.1.renderLabelAsLink>
+          <jsf.list.renderLabelAsLink>false</jsf.list.renderLabelAsLink>
+          <label>1</label>
+          <search.seam.Search.row1.col1 />
+          <search.seam.Search.row1.col1.colspan>1</search.seam.Search.row1.col1.colspan>
+          <search.seam.Search.row1.col1.colspan_label>1</search.seam.Search.row1.col1.colspan_label>
+          <search.seam.Search.row1.col1.colspan_value>1</search.seam.Search.row1.col1.colspan_value>
+          <validator.email>true</validator.email>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row1.col1 />
+          <view.page.View.row1.col1.colspan_label>1</view.page.View.row1.col1.colspan_label>
+          <view.page.View.row1.col1.colspan_value>1</view.page.View.row1.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text" notnull="false" length="250">
+        <properties>
+          <edit.page.Edit.colsTextArea>80</edit.page.Edit.colsTextArea>
+          <edit.page.Edit.row2.col1 />
+          <edit.page.Edit.row2.col1.colspan_label>1</edit.page.Edit.row2.col1.colspan_label>
+          <edit.page.Edit.row2.col1.colspan_value>1</edit.page.Edit.row2.col1.colspan_value>
+          <edit.page.Edit.rowsTextArea>4</edit.page.Edit.rowsTextArea>
+          <jsf.list.column.2 />
+          <search.seam.Search.colsTextArea>80</search.seam.Search.colsTextArea>
+          <search.seam.Search.row2.col1 />
+          <search.seam.Search.row2.col1.colspan_label>1</search.seam.Search.row2.col1.colspan_label>
+          <search.seam.Search.row2.col1.colspan_value>1</search.seam.Search.row2.col1.colspan_value>
+          <search.seam.Search.rowsTextArea>4</search.seam.Search.rowsTextArea>
+          <view.page.View.row2.col1 />
+          <view.page.View.row2.col1.colspan_label>1</view.page.View.row2.col1.colspan_label>
+          <view.page.View.row2.col1.colspan_value>1</view.page.View.row2.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="created" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Creation time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="creator" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who created this record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modified" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Modification time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modifier" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who modified this record</model.apicomment>
+        </properties>
+      </attribute>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties>
+        </properties>
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties>
+        </properties>
+      </reference>
+    </object>
+    <object name="AddressType">
+      <properties>
+        <audit.create>true</audit.create>
+        <audit.modify>true</audit.modify>
+        <comparator.create>true</comparator.create>
+        <defaultSortColumn>key</defaultSortColumn>
+        <edit.page>Edit</edit.page>
+        <edit.page.Edit.columnCount>2</edit.page.Edit.columnCount>
+        <edit.page.Edit.rowCount>2</edit.page.Edit.rowCount>
+        <enum>false</enum>
+        <enum_use>true</enum_use>
+        <jsf.list.columnCount>20</jsf.list.columnCount>
+        <login.required.edit>false</login.required.edit>
+        <login.required.search>true</login.required.search>
+        <login.required.view>true</login.required.view>
+        <menu.Admin>4</menu.Admin>
+        <name.plural>AddressTypes</name.plural>
+        <search.seam>Search</search.seam>
+        <search.seam.Search.columnCount>2</search.seam.Search.columnCount>
+        <search.seam.Search.rowCount>2</search.seam.Search.rowCount>
+        <security.seam.target>admin</security.seam.target>
+        <serialVersionUID>1</serialVersionUID>
+        <view.page>View</view.page>
+        <view.page.View.columnCount>2</view.page.View.columnCount>
+        <view.page.View.rowCount>8</view.page.View.rowCount>
+        <xi18n.translated.default>false</xi18n.translated.default>
+        <xi18n.translated.en>false</xi18n.translated.en>
+      </properties>
+      <attribute name="key" type="String" notnull="true">
+        <properties>
+          <businesskey>1</businesskey>
+          <edit.page.Edit.row1.col1 />
+          <edit.page.Edit.row1.col1.colspan>1</edit.page.Edit.row1.col1.colspan>
+          <edit.page.Edit.row1.col1.colspan_label>1</edit.page.Edit.row1.col1.colspan_label>
+          <edit.page.Edit.row1.col1.colspan_value>1</edit.page.Edit.row1.col1.colspan_value>
+          <jsf.list.column.0 />
+          <jsf.list.column.0.renderLabelAsLink>false</jsf.list.column.0.renderLabelAsLink>
+          <jsf.list.renderLabelAsLink>false</jsf.list.renderLabelAsLink>
+          <search.seam.Search.row1.col1 />
+          <search.seam.Search.row1.col1.colspan>1</search.seam.Search.row1.col1.colspan>
+          <search.seam.Search.row1.col1.colspan_label>1</search.seam.Search.row1.col1.colspan_label>
+          <search.seam.Search.row1.col1.colspan_value>1</search.seam.Search.row1.col1.colspan_value>
+          <view.page.View.renderLabelAsLink>false</view.page.View.renderLabelAsLink>
+          <view.page.View.row1.col1 />
+          <view.page.View.row1.col1.colspan_label>1</view.page.View.row1.col1.colspan_label>
+          <view.page.View.row1.col1.colspan_value>1</view.page.View.row1.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="qualifier" type="Integer" notnull="false">
+        <properties>
+          <edit.page.Edit.row2.col1 />
+          <edit.page.Edit.row2.col1.colspan_label>1</edit.page.Edit.row2.col1.colspan_label>
+          <edit.page.Edit.row2.col1.colspan_value>1</edit.page.Edit.row2.col1.colspan_value>
+          <search.seam.Search.row2.col1 />
+          <search.seam.Search.row2.col1.colspan_label>1</search.seam.Search.row2.col1.colspan_label>
+          <search.seam.Search.row2.col1.colspan_value>1</search.seam.Search.row2.col1.colspan_value>
+        </properties>
+      </attribute>
+      <attribute name="created" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Creation time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="creator" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who created this record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modified" type="DateTime" notnull="true">
+        <properties>
+          <model.apicomment>Modification time of record</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="modifier" type="String" notnull="true">
+        <properties>
+          <model.apicomment>Username who modified this record</model.apicomment>
+        </properties>
+      </attribute>
+    </object>
+  </package>
+</model>

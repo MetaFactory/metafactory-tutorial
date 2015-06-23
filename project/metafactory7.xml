@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personal-iom-project xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/project http://www.firstbase.nl/xsd/personaliom/project.xsd" allowDeprecated="false" xmlns="http://www.firstbase.nl/xsd/personaliom/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <model>../model/model7.xml</model>
+  <pattern>../pattern/pattern7.xml</pattern>
+  <snippetsFolder>../snippet</snippetsFolder>
+  <output>
+    <path type="java">../</path>
+    <path type="xml">../</path>
+    <path type="file">../</path>
+  </output>
+  <buildSets>
+    <buildSet name="pojo's">
+      <package name="org.metafactory.demo.example6.model.implementation"/>
+    </buildSet>
+    <buildSet name="dao's">
+      <package name="org.metafactory.demo.example6.cdi.dao"/>
+    </buildSet>
+  </buildSets>
+  <businessStyle>
+    <createDefaultJavaDocForClass>true</createDefaultJavaDocForClass>
+    <addAuthorToDefaultJavaDocForClass>true</addAuthorToDefaultJavaDocForClass>
+    <createDefaultJavaDocForInterface>true</createDefaultJavaDocForInterface>
+    <addAuthorToDefaultJavaDocForInterface>true</addAuthorToDefaultJavaDocForInterface>
+  </businessStyle>
+</personal-iom-project>

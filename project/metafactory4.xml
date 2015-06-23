@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personal-iom-project xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/project http://www.firstbase.nl/xsd/personaliom/project.xsd" allowDeprecated="false" xmlns="http://www.firstbase.nl/xsd/personaliom/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <model>../model/model4.xml</model>
+  <pattern>../pattern/pattern4.xml</pattern>
+  <snippetsFolder>../snippet</snippetsFolder>
+  <output>
+    <path type="java">../</path>
+    <path type="xml">../</path>
+    <path type="file">../</path>
+  </output>
+  <buildSets>
+  </buildSets>
+  <businessStyle>
+    <createDefaultJavaDocForClass>true</createDefaultJavaDocForClass>
+    <addAuthorToDefaultJavaDocForClass>true</addAuthorToDefaultJavaDocForClass>
+    <createDefaultJavaDocForInterface>true</createDefaultJavaDocForInterface>
+    <addAuthorToDefaultJavaDocForInterface>true</addAuthorToDefaultJavaDocForInterface>
+  </businessStyle>
+</personal-iom-project>

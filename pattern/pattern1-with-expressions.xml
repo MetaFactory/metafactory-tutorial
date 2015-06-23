@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pattern xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://www.firstbase.nl/xsd/personaliom/pattern"
+  xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd">
+  <properties>
+    <java.output.directory>src/main/java</java.output.directory>
+    <generic.base.packagenames>org.metafactory.demo.example1</generic.base.packagenames>
+    <name.of.class>ExampleWithExpressions</name.of.class>
+    <business.class>Business1</business.class>
+
+    <base>org.metafactory.demo.example1</base>
+
+    <model.implementation.package>${pattern.property.base}.model.implementation</model.implementation.package>
+    <model.implementation.class>${object.name}</model.implementation.class>
+    <model.implementation.reference>${reference.type}</model.implementation.reference>
+    <model.implementation.fqcn>${pattern.property.model.implementation.package}.${pattern.property.model.implementation.class}</model.implementation.fqcn>
+
+  </properties>
+  <package name="${pattern.property.base}">
+    <class name="${pattern.property.name.of.class}">
+      <attribute name="field1" visibility="private">
+        <datatype>String</datatype>
+        <apicomment>Een string veldje</apicomment>
+        <body>"Deze waarde is ingesteld in het pattern"</body>
+      </attribute>
+      <attribute name="field2" visibility="public">
+        <datatype>int</datatype>
+        <apicomment>Nog een veldje</apicomment>
+        <body>10</body>
+      </attribute>
+      <attribute name="CONSTANT" visibility="public" static="true" final="true">
+        <datatype>String</datatype>
+        <apicomment>Een constante</apicomment>
+        <body>"waarde"</body>
+      </attribute>
+      <operation name="methode1" visibility="private" static="false">
+        <parameter name="return"><datatype>String</datatype></parameter>
+        <parameter name="arg1"><datatype>String</datatype></parameter>
+        <parameter name="arg2"><datatype>int</datatype></parameter>
+        <body>return "Hello World";</body>
+      </operation>
+      <operation name="methode2" visibility="protected" static="false" >
+        <library>java.util.List</library>
+        <parameter name="return"><datatype>String</datatype></parameter>
+        <parameter name="list"><datatype><![CDATA[List<String>]]></datatype></parameter>
+        <body>return "Generic types zijn geen probleem";</body>
+      </operation>
+      <operation name="methode3" visibility="protected" static="false" >
+        <library>java.util.Set</library>
+        <apicomment>Hier kan ik het javadoc commentaar opgeven</apicomment>
+        <parameter name="list"><datatype><![CDATA[Set<String>]]></datatype></parameter>
+        <body>// doe iets</body>
+      </operation>
+
+      <operation name="main" visibility="public" static="true">
+        <parameter name="args"><datatype>String[]</datatype></parameter>
+        <body>System.out.println("Hello World");</body>
+      </operation>
+    </class>
+  </package>
+  <package name="${genpack}.core.model">
+    <class name="${pattern.property.business.class}">
+      <attribute name="ID" visibility="private">
+        <datatype>String</datatype>
+        <apicomment>De package name</apicomment>
+        <body>"${generated.package.name}"</body>
+      </attribute>
+      <attribute name="ClassID" visibility="private">
+        <datatype>String</datatype>
+        <apicomment>De class name in HOOFDLETTERS</apicomment>
+        <body>"${allUpper(${generated.class.name})}"</body>
+      </attribute>
+	    <attribute name="LOG" visibility="private" static="true" final="true">
+	      <library>org.slf4j.Logger</library>
+	      <library>org.slf4j.LoggerFactory</library>
+	      <datatype>Logger</datatype>
+	      <body>LoggerFactory.getLogger(${generated.class.name}.class.getName())</body>
+	    </attribute>
+      <operation name="methode1" visibility="protected" static="false">
+        <parameter name="return"><datatype>String</datatype></parameter>
+        <body>
+        LOG.debug("Hello World");
+        LOG.debug("ID=" + ID);
+        LOG.debug("ClassID=" + ClassID);
+        return "Hello World";
+        </body>
+      </operation>
+    </class>
+  </package>
+</pattern>

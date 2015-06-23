@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personal-iom-project xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/project http://www.firstbase.nl/xsd/personaliom/project.xsd" allowDeprecated="false" xmlns="http://www.firstbase.nl/xsd/personaliom/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <model>../model/model-gti.xml</model>
+  <pattern>../pattern/pattern-gti.xml</pattern>
+  <snippetsFolder>../snippet</snippetsFolder>
+  <output>
+    <path type="java">../</path>
+    <path type="xml">../</path>
+    <path type="file">../</path>
+  </output>
+  <buildSets>
+    <buildSet name="pojo's">
+      <package name="org.metafactory.demo.example6.model.implementation"/>
+    </buildSet>
+    <buildSet name="dao's">
+      <package name="org.metafactory.demo.example6.cdi.dao"/>
+    </buildSet>
+  </buildSets>
+  <businessStyle>
+    <createDefaultJavaDocForClass>false</createDefaultJavaDocForClass>
+    <addAuthorToDefaultJavaDocForClass>true</addAuthorToDefaultJavaDocForClass>
+    <createDefaultJavaDocForInterface>false</createDefaultJavaDocForInterface>
+    <addAuthorToDefaultJavaDocForInterface>true</addAuthorToDefaultJavaDocForInterface>
+    <header>
+      <![CDATA[
+      UNCLASS
+      Department of Defence,
+      Procurement Office,
+      Domain C4I, CAMS Force Visions
+
+      This informations carrier contains proprietary information which shall not
+      be used for other purposes than those for which it has been released, not
+      be reproduced or disclosed to third parties, without the prior written
+      consent of the department of defence.
+
+      NIET GERUBRICEERD
+      Ministerie van defensie,
+      Defensie Materieels Organisatie,
+      Ressort C4I, CAMS Force Vision
+      Deze informatie drager bevat eigendomsrechtelijke informatie. Deze mag
+      niet worden gebruikt voor andere doeleinden dan waarvoor het is uitgegeven.
+      Ook mogen er geen kopieen gemaakt worden of mag de inhoud bekend gesteld
+      worden aan anderen zonder voorafgaande schriftelijke toestemming van het
+      ministerie van defensie.
+
+      ]]>
+
+    </header>
+  </businessStyle>
+</personal-iom-project>

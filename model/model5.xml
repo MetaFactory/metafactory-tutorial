@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.firstbase.nl/xsd/personaliom/model" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/model http://www.firstbase.nl/xsd/personaliom/model.xsd">
+  <package name="domain_model">
+    <object name="Relation">
+      <properties>
+        <enum>false</enum>
+        <serialVersionUID>1</serialVersionUID>
+        <createConstructor>ByPerson</createConstructor>
+        <createConstructor>ByCompany</createConstructor>
+        <name.plural>Relations</name.plural>
+      </properties>
+      <reference name="type" type="RelationType" multiplicity="1..1" notnull="true">
+        <properties>
+          <useInConstructor>ByPerson</useInConstructor>
+          <useInConstructor>ByCompany</useInConstructor>
+          <businesskey>2</businesskey>
+        </properties>
+      </reference>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties>
+          <useInConstructor>ByPerson</useInConstructor>
+          <businesskey>1</businesskey>
+        </properties>
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties>
+          <useInConstructor>ByCompany</useInConstructor>
+          <businesskey>3</businesskey>
+        </properties>
+      </reference>
+    </object>
+    <object name="RelationType">
+      <properties>
+        <enum>true</enum>
+        <enum.constants>Private,Business</enum.constants>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+    </object>
+    <object name="Person">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Persons</name.plural>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+      <attribute name="firstName" type="String" notnull="true" length="40">
+        <properties>
+          <businesskey>2</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="middleName" type="String" notnull="false" length="10">
+        <properties>
+          <businesskey>3</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="lastName" type="String" notnull="true" length="60">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="birthDate" type="Date">
+        <properties />
+      </attribute>
+      <reference name="address" type="Address" multiplicity="0..n" notnull="false">
+        <properties>
+          <cascade.delete>false</cascade.delete>
+        </properties>
+      </reference>
+      <reference name="phone" type="Phone" multiplicity="0..n" notnull="false">
+        <properties>
+          <cascade.delete>false</cascade.delete>
+        </properties>
+      </reference>
+      <reference name="email" type="Email" multiplicity="0..n" notnull="false">
+        <properties>
+          <cascade.delete>false</cascade.delete>
+        </properties>
+      </reference>
+    </object>
+    <object name="Company">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Companies</name.plural>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+      <attribute name="name" type="String" notnull="true" length="120">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text">
+        <properties />
+      </attribute>
+      <reference name="address" type="Address" multiplicity="0..n" notnull="false">
+        <properties>
+          <cascade.delete>false</cascade.delete>
+        </properties>
+      </reference>
+      <reference name="phone" type="Phone" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="email" type="Email" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Address">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Addresses</name.plural>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+      <attribute name="streetName" type="String" notnull="true">
+        <properties>
+          <businesskey>2</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="zipCode" type="String">
+        <properties>
+          <businesskey>3</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="city" type="String" notnull="true">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="country" type="String">
+        <properties>
+          <entity.default.value>"Nederland"</entity.default.value>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text">
+        <properties />
+      </attribute>
+      <reference name="type" type="AddressType" multiplicity="1..1" notnull="true">
+        <properties />
+      </reference>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Phone">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Phones</name.plural>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+      <attribute name="number" type="String" notnull="true" length="20">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text" notnull="false" length="250">
+        <properties />
+      </attribute>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Email">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Emails</name.plural>
+        <createConstructor>ByEmailAddress</createConstructor>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+      <attribute name="emailAddress" type="String" notnull="true" length="80">
+        <properties>
+          <businesskey>1</businesskey>
+          <useInConstructor>ByEmailAddress</useInConstructor>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text" notnull="false" length="250">
+        <properties />
+      </attribute>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="AddressType">
+      <properties>
+        <enum>false</enum>
+        <enum_use>true</enum_use>
+        <name.plural>AddressTypes</name.plural>
+        <serialVersionUID>1</serialVersionUID>
+      </properties>
+      <attribute name="key" type="String" notnull="true">
+        <properties>
+          <businesskey>1</businesskey>
+          <model.apicomment>Unique key</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="qualifier" type="Integer" notnull="false">
+        <properties>
+          <model.apicomment>Numeric value used for sorting</model.apicomment>
+        </properties>
+      </attribute>
+    </object>
+  </package>
+</model>
