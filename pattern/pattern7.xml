@@ -23,6 +23,8 @@
     <pk>${firstLower(${object.name})}Id</pk>
     <dao.getEntityManager>getEm()</dao.getEntityManager>
 
+    <create.combo.fill>false</create.combo.fill>
+
   </properties>
   <externalLibraries>
     <externalLibrary name="lib1">
