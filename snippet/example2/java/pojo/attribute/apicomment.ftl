@@ -15,4 +15,8 @@
 <#assign javaType = generator.getJavaType(attributeType)>
 
 <#assign apiComment = generator.getElementProperty(currentModelAttribute,"model.apicomment")>
+<#if (apiComment?length == 0) >
+  the ${attributeName} field
+<#else>
 ${apiComment}
+</#if>
