@@ -22,6 +22,8 @@
     <!-- The pk property determines the name of the primary key -->
     <pk>${firstLower(${object.name})}Id</pk>
 
+    <create.combo.fill>false</create.combo.fill>
+
   </properties>
   <externalLibraries>
     <externalLibrary name="lib1">
