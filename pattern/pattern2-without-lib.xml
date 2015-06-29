@@ -54,11 +54,14 @@
         </body>
       </attribute>
   <!--
+   -->
       <operation name="constructor" condition="${model.property.object.enum}!=true">
         <apicomment>Default constructor which loads defaults by using method loadDefaults</apicomment>
-        <body>// do nothing</body>
+        <body>
+          super();
+          // do nothing
+        </body>
       </operation>
-   -->
 
       <operation name="addTo${firstUpper(${reference.name})}" foreach="reference" condition="${reference.multiplicity}=0..n OR ${reference.multiplicity}=1..n">
         <parameter name="${firstLower(${reference.name})}">

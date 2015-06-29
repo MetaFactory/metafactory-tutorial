@@ -230,6 +230,10 @@
         <serialVersionUID>1</serialVersionUID>
         <audit.create>true</audit.create>
         <audit.modify>true</audit.modify>
+        <!--
+        <dao.finder.list.key>PersonCompany</dao.finder.list.key>
+          <dao.finder.list.key.PersonCompany />
+         -->
       </properties>
       <attribute name="emailAddress" type="String" notnull="true" length="80">
         <properties>

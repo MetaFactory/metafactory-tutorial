@@ -23,10 +23,12 @@
     <pk>${firstLower(${object.name})}Id</pk>
     <dao.getEntityManager>getEm()</dao.getEntityManager>
 
+    <create.combo.fill>false</create.combo.fill>
+
   </properties>
   <externalLibraries>
     <externalLibrary name="lib1">
-      <path>/Users/marnix/git/metafactory-library</path>
+      <path>../../metafactory-library</path>
       <patternsFolder>pattern</patternsFolder>
       <snippetsFolder>snippet</snippetsFolder>
     </externalLibrary>
