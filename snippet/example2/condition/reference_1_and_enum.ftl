@@ -14,11 +14,11 @@
 <#assign referenceType = reference.getAttributeValue("type")>
 <#assign multiplicity = reference.getAttributeValue("multiplicity")>
 
-<#if !(generator.findChildByAttribute(currentModelPackage, "object" , "name", referenceType))??>
+<#if !(metafactory.findChildByAttribute(currentModelPackage, "object" , "name", referenceType))??>
   <#stop "object with name ${referenceType} not found in package ${currentModelPackage.getAttributeValue('name')}. Reference defined in object with name ${currentModelObject.getAttributeValue('name')}">
 </#if>
-<#assign referenceObjectElement = generator.findChildByAttribute(currentModelPackage, "object" , "name", referenceType)>
-<#assign isEnum = generator.getElementProperty(referenceObjectElement, "enum")>
+<#assign referenceObjectElement = metafactory.findChildByAttribute(currentModelPackage, "object" , "name", referenceType)>
+<#assign isEnum = metafactory.getElementProperty(referenceObjectElement, "enum")>
 
 <#if (isEnum=="true" && (multiplicity == "0..1" || multiplicity == "1..1")) >
   true

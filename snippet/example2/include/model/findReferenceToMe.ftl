@@ -8,7 +8,7 @@
 
 -->
 <#--stop if $currentModelPackage is null-->
-<#if !(currentModelPackage)??>  ${generator.error("currentModelPackage not found in context")} </#if>
+<#if !(currentModelPackage)??>  ${metafactory.error("currentModelPackage not found in context")} </#if>
 
 <#--stop if $currentModelObject is null-->
 <#if !(currentModelObject)??>  <#stop "currentModelObject not found in context" ></#if>
@@ -27,10 +27,10 @@
 
 <#assign modelObjectName = currentModelObject.getAttributeValue('name') >
 <#-- Find the 0..1 or 1..1 reference to me -->
-<#assign referenceObjectElement = generator.findChildByAttribute(currentModelPackage,"object","name",referenceType) >
+<#assign referenceObjectElement = metafactory.findChildByAttribute(currentModelPackage,"object","name",referenceType) >
 
 <#--find a reference from this element ($referenceObjectElement) with type modelObjectName -->
-<#assign referenceToMeElements = generator.findChildrenByAttribute(referenceObjectElement,"reference","type",modelObjectName) >
+<#assign referenceToMeElements = metafactory.findChildrenByAttribute(referenceObjectElement,"reference","type",modelObjectName) >
 
 <#--remove references with multiplicity other than 0..1 or 1..1 -->
 <#list referenceToMeElements as r >
@@ -49,9 +49,9 @@ when only 1 reference found, create the value of the mappedBy attribute and inse
   <#stop "Invalid model: No reference 0..1 or 1..1 of type ${modelObjectName} found in object with name ${referenceType}." >
 <#elseif (referenceToMeElements.size()>1) >
   <#--The reference to me can be explicitly set in a property (to remove a ambiguity), so first check if there's a property set -->
-  <#if (generator.elementContainsProperty(reference,"opposite.reference.tome")) >
-    <#assign referenceToMeProperty = generator.getElementProperty(reference,"opposite.reference.tome") >
-    <#assign referenceToMe = generator.findChildByAttribute(referenceObjectElement,"reference","name",referenceToMeProperty) >
+  <#if (metafactory.elementContainsProperty(reference,"opposite.reference.tome")) >
+    <#assign referenceToMeProperty = metafactory.getElementProperty(reference,"opposite.reference.tome") >
+    <#assign referenceToMe = metafactory.findChildByAttribute(referenceObjectElement,"reference","name",referenceToMeProperty) >
   <#else>
     <#--
     No property found, so find the object with name referenceType in currentModelPackage
@@ -59,7 +59,7 @@ when only 1 reference found, create the value of the mappedBy attribute and inse
     -->
     <#assign referenceToMe = referenceToMeElements.get(0) >
     <#assign name = referenceToMe.getAttributeValue("name") >
-    ${generator.addProperty(reference,"opposite.reference.tome",name)}
+    ${metafactory.addProperty(reference,"opposite.reference.tome",name)}
     ${context.addWarning("ambiguity found: multiple references with type ${modelObjectName} found in object with name ${referenceType}. => Property added to model with assumption of ${name}")}
   </#if>
 <#else>
@@ -67,4 +67,4 @@ when only 1 reference found, create the value of the mappedBy attribute and inse
 </#if>
 
 <#assign referenceToMeName = referenceToMe.getAttributeValue('name') >
-<#assign referenceToMeNameFU = generator.firstUpper(referenceToMeName) >
+<#assign referenceToMeNameFU = metafactory.firstUpper(referenceToMeName) >
