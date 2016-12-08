@@ -50,7 +50,8 @@ Expressions such as ${object.name} are known at the time of execution because a 
 What this in fact does is that you define a keyname, which you can bind to attributes by using that second step. Given that this key is bound to (in the case of object 'Company') to attribute "name" and "phone" we now have the information we need to do something specific with only these attributes. By first defining the key and then looping over the results that MetaFactory finds, we can create specific finder methods that accept only these attributes as parameters.<p>
 The same principle holds for example if you would want to define a unique key constraint on a table. You would then define something like < unique.key.companyUniqueKey />.
 
+We used this mechanism also in example 4 to create 2 constructors in the Relation class with different parameters.
 
 
-    - ggg
+
 
