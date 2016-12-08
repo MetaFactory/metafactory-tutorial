@@ -33,13 +33,13 @@ Expressions such as ${object.name} are known at the time of execution because a 
 
 ##Example 5
 
-<p>In comparison to the previous example a few things have changed. Most importantly the external package that has been imported in pattern5.xml to code the POJO has been replaced by a different one (model-jpa2.xml). Since this other pattern requires some additional metadata, new properties have been added to the model. Note that a property called 
+In comparison to the previous example a few things have changed. Most importantly the external package that has been imported in pattern5.xml to code the POJO has been replaced by a different one (model-jpa2.xml). Since this other pattern requires some additional metadata, new properties have been added to the model. Note that a property called 
 
 ```
 <serialVersionUID>
 ```
 
- has now been added to each object.</p>
+ has now been added to each object.
 
 ##Example 6
 
