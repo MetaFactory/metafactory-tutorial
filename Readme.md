@@ -47,6 +47,3 @@ What this in fact does is that you define a keyname, which you can bind to attri
 The same principle holds for example if you would want to define a unique key constraint on a table. You would then define something like < unique.key.companyUniqueKey />.
 
 
-
-    - ggg
-
