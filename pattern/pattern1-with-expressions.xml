@@ -23,7 +23,7 @@
 
   	The expression ${pattern.property.base} will be resolved to org.metafactory.tutorial.example1
    -->
-  <package name="${pattern.property.java.output.directory}.${pattern.property.base}">
+  <package name="${pattern.property.base}" path="${pattern.property.java.output.directory}">
 
   	<!--
   		Create a java class. The name of this is set by the pattern property "name.of.class" which is set
@@ -70,7 +70,7 @@
       </operation>
     </class>
   </package>
-  <package name="${pattern.property.java.output.directory}.${pattern.property.base}.core.model">
+  <package name="${pattern.property.base}.core.model" path="${pattern.property.java.output.directory}">
     <class name="${pattern.property.business.class}">
       <attribute name="ID" visibility="private">
         <datatype>String</datatype>
