@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pattern xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.firstbase.nl/xsd/personaliom/pattern"
   xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
 >
   <properties>
     <java.main.directory>generated/src/main/java/</java.main.directory>
@@ -8,7 +9,7 @@
     <java.test.directory>generated/src/test/java/</java.test.directory>
     <conf.test.directory>generated/src/test/resources</conf.test.directory>
 
-    <base>org.metafactory.tutorial.example3</base>
+    <base>org.metafactory.tutorial.example2</base>
 
     <model.implementation.package>${pattern.property.base}.model.implementation</model.implementation.package>
     <model.implementation.class>${object.name}</model.implementation.class>
@@ -16,17 +17,10 @@
     <model.implementation.fqcn>${pattern.property.model.implementation.package}.${pattern.property.model.implementation.class}</model.implementation.fqcn>
 
     <!-- The pk property determines the name of the primary key -->
-    <pk>id</pk>
+    <pk>${firstLower(${object.name})}Id</pk>
 
   </properties>
-  <externalLibraries>
-    <externalLibrary name="lib1">
-      <path>../../metafactory-library</path>
-      <patternsFolder>pattern</patternsFolder>
-      <snippetsFolder>snippet</snippetsFolder>
-    </externalLibrary>
-  </externalLibraries>
 
-  <external.package id="lib1/package/pojo/model-advanced.xml" path="${pattern.property.java.main.directory}" />
+  <xi:include parse="xml" href="pattern2a-sub.xml" />
 
 </pattern>

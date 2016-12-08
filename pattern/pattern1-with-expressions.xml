@@ -2,12 +2,11 @@
 <pattern xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://www.firstbase.nl/xsd/personaliom/pattern"
   xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd">
   <properties>
-    <java.output.directory>src/main/java</java.output.directory>
-    <generic.base.packagenames>org.metafactory.demo.example1</generic.base.packagenames>
-    <name.of.class>ExampleWithExpressions</name.of.class>
+    <java.output.directory>generated/src/main/java</java.output.directory>
+    <name.of.class>HelloWorldWithExpressions</name.of.class>
     <business.class>Business1</business.class>
 
-    <base>org.metafactory.demo.example1</base>
+    <base>org.metafactory.tutorial.example1</base>
 
     <model.implementation.package>${pattern.property.base}.model.implementation</model.implementation.package>
     <model.implementation.class>${object.name}</model.implementation.class>
@@ -20,11 +19,11 @@
   	expression is resolved by MetaFactory. Expressions starting with ${pattern.property. are used to
   	reference a "pattern property". These properties (metadata) are defined in the properties child
   	element of the root element of the pattern. Read more about pattern properties at:
-  	https://www.metafactory.nl/document/pattern-beschrijving/pattern-properties/
+  	https://www.metafactory.nl/document/pattern-reference/pattern-properties/
 
-  	The expression ${pattern.property.base} will be resolved to org.metafactory.demo.example1
+  	The expression ${pattern.property.base} will be resolved to org.metafactory.tutorial.example1
    -->
-  <package name="${pattern.property.base}">
+  <package name="${pattern.property.java.output.directory}.${pattern.property.base}">
 
   	<!--
   		Create a java class. The name of this is set by the pattern property "name.of.class" which is set
@@ -71,7 +70,7 @@
       </operation>
     </class>
   </package>
-  <package name="${genpack}.core.model">
+  <package name="${pattern.property.java.output.directory}.${pattern.property.base}.core.model">
     <class name="${pattern.property.business.class}">
       <attribute name="ID" visibility="private">
         <datatype>String</datatype>

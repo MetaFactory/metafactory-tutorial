@@ -2,13 +2,13 @@
 <pattern xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://www.firstbase.nl/xsd/personaliom/pattern"
   xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd">
   <properties>
-    <java.output.directory>src/main/java</java.output.directory>
+    <java.output.directory>generated/src/main/java</java.output.directory>
   </properties>
 
-  <!-- Create a java package with name org.metafactory.demo.example1 -->
-  <package name="org.metafactory.demo.example1">
+  <!-- Create a java package with name org.metafactory.tutorial.example1 -->
+  <package name="${pattern.property.java.output.directory}.org.metafactory.tutorial.example1">
 
-    <!-- Create the class HelloWorld in package org.metafactory.demo.example1 -->
+    <!-- Create the class HelloWorld in package org.metafactory.tutorial.example1 -->
     <class name="HelloWorld">
 
       <!-- Create 1 method with name main and the usual main parameters -->
