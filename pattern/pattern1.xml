@@ -6,7 +6,7 @@
   </properties>
 
   <!-- Create a java package with name org.metafactory.tutorial.example1 -->
-  <package name="${pattern.property.java.output.directory}.org.metafactory.tutorial.example1">
+  <package name="org.metafactory.tutorial.example1" path="${pattern.property.java.output.directory}">
 
     <!-- Create the class HelloWorld in package org.metafactory.tutorial.example1 -->
     <class name="HelloWorld">
