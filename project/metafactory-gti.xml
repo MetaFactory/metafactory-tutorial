@@ -10,10 +10,10 @@
   </output>
   <buildSets>
     <buildSet name="pojo's">
-      <package name="org.metafactory.demo.example6.model.implementation"/>
+      <package name="org.metafactory.tutorial.example6.model.implementation"/>
     </buildSet>
     <buildSet name="dao's">
-      <package name="org.metafactory.demo.example6.cdi.dao"/>
+      <package name="org.metafactory.tutorial.example6.cdi.dao"/>
     </buildSet>
   </buildSets>
   <businessStyle>

@@ -3,14 +3,14 @@
   xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd"
 >
   <properties>
-    <java.main.directory>src/main/java/</java.main.directory>
-    <conf.main.directory>src/main/resources</conf.main.directory>
-    <java.test.directory>src/test/java/</java.test.directory>
-    <conf.test.directory>src/test/resources</conf.test.directory>
+    <java.main.directory>generated/src/main/java/</java.main.directory>
+    <conf.main.directory>generated/src/main/resources</conf.main.directory>
+    <java.test.directory>generated/src/test/java/</java.test.directory>
+    <conf.test.directory>generated/src/test/resources</conf.test.directory>
 
-    <generic.base.packagenames>org.metafactory.demo.example6</generic.base.packagenames>
-    <base>org.metafactory.demo.example6</base>
-    <product.keyword>DemoExample6</product.keyword>
+    <generic.base.packagenames>org.metafactory.tutorial.example6</generic.base.packagenames>
+    <base>org.metafactory.tutorial.example6</base>
+    <product.keyword>tutorialExample6</product.keyword>
 
     <model.implementation.package>${genpack}.model.implementation</model.implementation.package>
     <model.implementation.class>${object.name}</model.implementation.class>

@@ -34,7 +34,7 @@
             <configuration>
               <!-- source output directory
               -->
-              <outputDirectory>src/main/generated</outputDirectory>
+              <outputDirectory>generated/src/main</outputDirectory>
             </configuration>
           </execution>
         </executions>
