@@ -2,18 +2,14 @@ package org.metafactory.tutorial.example2.model.implementation;
 
 /**
  * Phone - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Phone
 {
   /** primary key */
   private Long    phoneId;
 
-  /** the number field */
   private String  number;
 
-  /** the description field */
   private String  description;
 
   private Person  person;
@@ -118,15 +114,6 @@ public class Phone
   public void setCompany(final Company company)
   {
     this.company = company;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public Phone()
-  {
-    super();
-    // do nothing
   }
 
 }

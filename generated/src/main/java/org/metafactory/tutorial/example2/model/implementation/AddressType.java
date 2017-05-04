@@ -2,8 +2,6 @@ package org.metafactory.tutorial.example2.model.implementation;
 
 /**
  * AddressType - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class AddressType
 {
@@ -74,15 +72,6 @@ public class AddressType
   public void setQualifier(final Integer qualifier)
   {
     this.qualifier = qualifier;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public AddressType()
-  {
-    super();
-    // do nothing
   }
 
 }

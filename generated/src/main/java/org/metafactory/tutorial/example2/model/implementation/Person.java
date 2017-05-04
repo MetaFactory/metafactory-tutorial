@@ -6,24 +6,18 @@ import java.util.Set;
 
 /**
  * Person - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Person
 {
   /** primary key */
   private Long         personId;
 
-  /** the firstName field */
   private String       firstName;
 
-  /** the middleName field */
   private String       middleName;
 
-  /** the lastName field */
   private String       lastName;
 
-  /** the birthDate field */
   private Date         birthDate;
 
   private Set<Address> addressSet = new HashSet<Address>();
@@ -190,15 +184,6 @@ public class Person
   public void setEmailSet(final Set<Email> emailSet)
   {
     this.emailSet = emailSet;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public Person()
-  {
-    super();
-    // do nothing
   }
 
   /**

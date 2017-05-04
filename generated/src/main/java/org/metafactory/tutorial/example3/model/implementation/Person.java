@@ -6,8 +6,6 @@ import java.util.Set;
 
 /**
  * Person - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Person
 {

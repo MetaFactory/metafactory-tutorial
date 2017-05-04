@@ -2,18 +2,14 @@ package org.metafactory.tutorial.example2.model.implementation;
 
 /**
  * Email - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Email
 {
   /** primary key */
   private Long    emailId;
 
-  /** the emailAddress field */
   private String  emailAddress;
 
-  /** the description field */
   private String  description;
 
   private Person  person;
@@ -118,15 +114,6 @@ public class Email
   public void setCompany(final Company company)
   {
     this.company = company;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public Email()
-  {
-    super();
-    // do nothing
   }
 
 }

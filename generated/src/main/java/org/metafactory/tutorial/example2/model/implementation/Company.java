@@ -5,18 +5,14 @@ import java.util.Set;
 
 /**
  * Company - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Company
 {
   /** primary key */
   private Long         companyId;
 
-  /** the name field */
   private String       name;
 
-  /** the description field */
   private String       description;
 
   private Phone        phone;
@@ -143,15 +139,6 @@ public class Company
   public void setAddressSet(final Set<Address> addressSet)
   {
     this.addressSet = addressSet;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public Company()
-  {
-    super();
-    // do nothing
   }
 
   /**

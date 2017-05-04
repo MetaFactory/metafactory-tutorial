@@ -2,8 +2,6 @@ package org.metafactory.tutorial.example2.model.implementation;
 
 /**
  * Relation - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Relation
 {
@@ -94,15 +92,6 @@ public class Relation
   public void setCompany(final Company company)
   {
     this.company = company;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public Relation()
-  {
-    super();
-    // do nothing
   }
 
 }

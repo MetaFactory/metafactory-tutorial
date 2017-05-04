@@ -2,8 +2,6 @@ package org.metafactory.tutorial.example3.model.implementation;
 
 /**
  * Address - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Address
 {

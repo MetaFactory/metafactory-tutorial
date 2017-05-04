@@ -2,27 +2,20 @@ package org.metafactory.tutorial.example2.model.implementation;
 
 /**
  * Address - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Address
 {
   /** primary key */
   private Long        addressId;
 
-  /** the streetName field */
   private String      streetName;
 
-  /** the zipCode field */
   private String      zipCode;
 
-  /** the city field */
   private String      city;
 
-  /** the country field */
   private String      country;
 
-  /** the description field */
   private String      description;
 
   private AddressType type;
@@ -209,15 +202,6 @@ public class Address
   public void setCompany(final Company company)
   {
     this.company = company;
-  }
-
-  /**
-   * constructor - Default constructor which loads defaults by using method loadDefaults
-   */
-  public Address()
-  {
-    super();
-    // do nothing
   }
 
 }

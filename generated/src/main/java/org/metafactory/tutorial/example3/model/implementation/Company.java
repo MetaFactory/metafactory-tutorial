@@ -5,8 +5,6 @@ import java.util.Set;
 
 /**
  * Company - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Company
 {

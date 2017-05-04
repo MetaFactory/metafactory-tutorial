@@ -2,8 +2,6 @@ package org.metafactory.tutorial.example3.model.implementation;
 
 /**
  * Relation - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public class Relation
 {
