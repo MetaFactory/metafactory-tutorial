@@ -12,8 +12,8 @@
   </buildSets>
   <businessStyle>
     <createDefaultJavaDocForClass>true</createDefaultJavaDocForClass>
-    <addAuthorToDefaultJavaDocForClass>true</addAuthorToDefaultJavaDocForClass>
+    <addAuthorToDefaultJavaDocForClass>false</addAuthorToDefaultJavaDocForClass>
     <createDefaultJavaDocForInterface>true</createDefaultJavaDocForInterface>
-    <addAuthorToDefaultJavaDocForInterface>true</addAuthorToDefaultJavaDocForInterface>
+    <addAuthorToDefaultJavaDocForInterface>false</addAuthorToDefaultJavaDocForInterface>
   </businessStyle>
 </personal-iom-project>

@@ -18,31 +18,12 @@
   </buildSets>
   <businessStyle>
     <createDefaultJavaDocForClass>false</createDefaultJavaDocForClass>
-    <addAuthorToDefaultJavaDocForClass>true</addAuthorToDefaultJavaDocForClass>
+    <addAuthorToDefaultJavaDocForClass>false</addAuthorToDefaultJavaDocForClass>
     <createDefaultJavaDocForInterface>false</createDefaultJavaDocForInterface>
-    <addAuthorToDefaultJavaDocForInterface>true</addAuthorToDefaultJavaDocForInterface>
+    <addAuthorToDefaultJavaDocForInterface>false</addAuthorToDefaultJavaDocForInterface>
     <header>
       <![CDATA[
-      UNCLASS
-      Department of Defence,
-      Procurement Office,
-      Domain C4I, CAMS Force Visions
-
-      This informations carrier contains proprietary information which shall not
-      be used for other purposes than those for which it has been released, not
-      be reproduced or disclosed to third parties, without the prior written
-      consent of the department of defence.
-
-      NIET GERUBRICEERD
-      Ministerie van defensie,
-      Defensie Materieels Organisatie,
-      Ressort C4I, CAMS Force Vision
-      Deze informatie drager bevat eigendomsrechtelijke informatie. Deze mag
-      niet worden gebruikt voor andere doeleinden dan waarvoor het is uitgegeven.
-      Ook mogen er geen kopieen gemaakt worden of mag de inhoud bekend gesteld
-      worden aan anderen zonder voorafgaande schriftelijke toestemming van het
-      ministerie van defensie.
-
+        Your header
       ]]>
 
     </header>
