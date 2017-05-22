@@ -12,8 +12,8 @@ This first example naturally is about ‘Hello World’, which simply generates 
 
 ## Example 1 with expressions
 
-This example takes the concept of Hello world to a higer level with added expressions as the most notable feature. Take a look at the pattern while comparing it to the previous tutorial and you will notice a huge difference. Many names are now no longer hard coded, but replaced by expressions instead. These expressions (such as in pattern.with-expressions.xml) use properties that we can define ourselves in the patterns. Read more about pattern properties <a href="https://www.metafactory.nl/document/pattern-reference/pattern-properties/">here</a>.
-Expressions such as ${object.name} are known at the time of execution because a pattern is always executed within the context of the part of the domain model that MetaFactory is iterating over, such as a package, object or property. Read more about expressions <a href="https://www.metafactory.nl/document/expressions-2/">here</a>.
+This example takes the concept of Hello world to a higer level with added expressions as the most notable feature. Take a look at the pattern while comparing it to the previous tutorial and you will notice a huge difference. Many names are now no longer hard coded, but replaced by expressions instead. These expressions (such as in pattern.with-expressions.xml) use properties that we can define ourselves in the patterns. <a href="https://www.metafactory.nl/document/pattern-reference/pattern-properties/">Read more about pattern properties</a>.
+Expressions such as ${object.name} are known at the time of execution because a pattern is always executed within the context of the part of the domain model that MetaFactory is iterating over, such as a package, object or property. <a href="https://www.metafactory.nl/document/expressions-2/variables/">Read more about expressions here</a>.
 We recommend you to generate the code of this example yourself, after changing <java.output.directory>generated/src/main/java</java.output.directory> into a location of your own choice. Try and play around with the other properties as well.
 
 ## Example 2
