@@ -19,13 +19,13 @@ We recommend you to generate the code of this example yourself, after changing <
 ## Example 2
 
 Writing all code instructions in pattern.xml quickly becomes messy. It is therefore recommended to separate concerns in different pattern files. The most obvious one is it to include a pattern the xml way through ’xi:include’, which is shown in example 2a.
-   The other way is to include a pattern file which is in a different project altogether, for example your very own library. Example 2b uses a pattern from the <a href="https://github.com/MetaFactory/metafactory-library">metafactory-library</a> project. Therefore to generated the code of Example 2b you will need to first clone the metafactory-library and update the path to lib1. 
+   The other way is to include a pattern file which is in a different project altogether, for example your very own library. Example 2b uses a pattern from the <a href="https://github.com/MetaFactory/metafactory-library">metafactory-library</a> project. Therefore to generate the code of Example 2b you will need to first clone the metafactory-library and update the path to lib1. 
    Both examples generate a series of Java POJOs, for which al objects and including properties are drawn from model2.xml.
 
 ## Example 3
 
 Example 3 does the same as example 2b, but the generated POJOs are now more advanced, with an added equals, hashCode and toString method. The external package from metafactory-library that is referred to relies heavily on expressions for naming as well as conditions that determine whether a piece of code is actually generated. Another concept that is new here is the use of snippets, which MetaFactory supports in either Freemarker of Velocity format.
- Snippets are pieces of code that you can load from a template into your pattern like this: ${fmsnippet.condition.reference_1_and_enum} – which checks whether the object reference MetaFactory is currently iterating over has a multiplicity of 0..1 or 1..1 and is not an enum. After ‘fmsnippet’ follows the name of the file. Also note that an external library is used in this example (‘lib1), which is defined in pattern3.xml. You can read more about this subject <a href="https://www.metafactory.nl/document/pattern-reference/external-libraries/">here</a>.
+ Snippets are pieces of code that you can load from a template into your pattern like this: ${fmsnippet.condition.reference_1_and_enum} – which checks whether the object reference MetaFactory is currently iterating over has a multiplicity of 0..1 or 1..1 and is not an enum. After ‘fmsnippet’ follows the name (and path using a dot as subdirectory seperator) of the file. Also note that an external library is used in this example (‘lib1), which is defined in pattern3.xml. You can read more about this subject <a href="https://www.metafactory.nl/document/pattern-reference/external-libraries/">here</a>.
  
 ## Example 4
 
