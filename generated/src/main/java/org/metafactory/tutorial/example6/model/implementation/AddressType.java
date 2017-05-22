@@ -12,8 +12,6 @@ import javax.validation.constraints.NotNull;
 
 /**
  * AddressType - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Entity
 @Table(name = "AddressType")

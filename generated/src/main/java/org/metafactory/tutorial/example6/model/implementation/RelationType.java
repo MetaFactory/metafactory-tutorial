@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 /**
  * RelationType - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public enum RelationType implements Serializable {
   Private, Business;

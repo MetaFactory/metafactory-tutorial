@@ -15,8 +15,6 @@ import javax.validation.constraints.NotNull;
 
 /**
  * Relation - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Entity
 @Table(name = "Relation")

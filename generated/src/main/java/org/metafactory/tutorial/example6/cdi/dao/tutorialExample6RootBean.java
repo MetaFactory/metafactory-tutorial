@@ -12,8 +12,6 @@ import javax.persistence.metamodel.Metamodel;
 
 /**
  * tutorialExample6RootBean - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 public abstract class tutorialExample6RootBean<T>
 {
