@@ -28,8 +28,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * CompanyDaoBean - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Named
 @Transactional(TxType.MANDATORY)

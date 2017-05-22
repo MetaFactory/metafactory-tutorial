@@ -6,8 +6,6 @@ import javax.persistence.Version;
 
 /**
  * BaseModel - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @MappedSuperclass
 public abstract class BaseModel

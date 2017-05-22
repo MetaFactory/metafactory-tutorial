@@ -17,8 +17,6 @@ import javax.validation.constraints.Size;
 
 /**
  * Phone - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Entity
 @Table(name = "Phone")

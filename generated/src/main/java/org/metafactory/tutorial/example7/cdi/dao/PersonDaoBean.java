@@ -17,8 +17,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * PersonDaoBean - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Named
 @Transactional(TxType.MANDATORY)

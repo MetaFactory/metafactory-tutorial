@@ -27,8 +27,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * AddressDaoBean - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Named
 @Transactional(TxType.MANDATORY)

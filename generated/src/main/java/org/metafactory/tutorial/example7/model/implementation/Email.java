@@ -17,8 +17,6 @@ import javax.validation.constraints.Size;
 
 /**
  * Email - Created by MetaFactory: Automation of Software Development
- * 
- * @author - Merijn
  */
 @Entity
 @Table(name = "Email")
