@@ -12,8 +12,8 @@ This first example naturally is about ‘Hello World’, which simply generates 
 
 ## Example 1 with expressions
 
-This example takes the concept of Hello world to a higer level with added expressions as the most notable feature. Take a look at the pattern while comparing it to the previous tutorial and you will notice a huge difference. Many names are now no longer hard coded, but replaced by expressions instead. These expressions (such as in pattern.with-expressions.xml) use properties that we can define ourselves in the patterns. <a href="https://www.metafactory.nl/document/pattern-reference/pattern-properties/">Read more about pattern properties</a>.
-Expressions such as ${object.name} are known at the time of execution because a pattern is always executed within the context of the part of the domain model that MetaFactory is iterating over, such as a package, object or property. <a href="https://www.metafactory.nl/document/expressions-2/variables/">Read more about expressions here</a>.
+This example takes the concept of Hello world to a higer level with added expressions as the most notable feature. Take a look at the pattern while comparing it to the previous tutorial and you will notice a huge difference. Many names are now no longer hard coded, but replaced by expressions instead. These expressions (such as in pattern.with-expressions.xml) use properties that we can define ourselves in the patterns. <a href="https://www.metafactory.nl/document/xml-metafactorys-pattern-base/code-instruction-properties/">Read more about pattern properties</a>.
+Expressions such as ${object.name} are known at the time of execution because a pattern is always executed within the context of the part of the domain model that MetaFactory is iterating over, such as a package, object or property. <a href="https://www.metafactory.nl/document/expressions-2/">Read more about expressions here</a>.
 We recommend you to generate the code of this example yourself, after changing <java.output.directory>generated/src/main/java</java.output.directory> into a location of your own choice. Try and play around with the other properties as well.
 
 ## Example 2
@@ -25,7 +25,7 @@ Writing all code instructions in pattern.xml quickly becomes messy. It is theref
 ## Example 3
 
 Example 3 does the same as example 2b, but the generated POJOs are now more advanced, with an added equals, hashCode and toString method. The external package from metafactory-library that is referred to relies heavily on expressions for naming as well as conditions that determine whether a piece of code is actually generated. Another concept that is new here is the use of snippets, which MetaFactory supports in either Freemarker of Velocity format.
- Snippets are pieces of code that you can load from a template into your pattern like this: ${fmsnippet.condition.reference_1_and_enum} – which checks whether the object reference MetaFactory is currently iterating over has a multiplicity of 0..1 or 1..1 and is not an enum. After ‘fmsnippet’ follows the name (and path using a dot as subdirectory seperator) of the file. Also note that an external library is used in this example (‘lib1), which is defined in pattern3.xml. You can read more about this subject <a href="https://www.metafactory.nl/document/pattern-reference/external-libraries/">here</a>.
+ Snippets are pieces of code that you can load from a template into your pattern like this: ${fmsnippet.condition.reference_1_and_enum} – which checks whether the object reference MetaFactory is currently iterating over has a multiplicity of 0..1 or 1..1 and is not an enum. After ‘fmsnippet’ follows the name (and path using a dot as subdirectory seperator) of the file. Also note that an external library is used in this example (‘lib1), which is defined in pattern3.xml. <a href="https://www.metafactory.nl/document/xml-metafactorys-pattern-base/external-libraries/">You can read more about external libraries/a>.
  
 ## Example 4
 
