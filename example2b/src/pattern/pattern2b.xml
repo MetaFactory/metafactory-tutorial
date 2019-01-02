@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd"
 >
   <properties>
-    <java.main.directory>generated/src/main/generated/</java.main.directory>
-    <conf.main.directory>generated/src/main/resources</conf.main.directory>
-    <java.test.directory>generated/src/test/java/</java.test.directory>
-    <conf.test.directory>generated/src/test/resources</conf.test.directory>
+    <java.main.directory>src/main/generated/</java.main.directory>
+    <conf.main.directory>src/main/resources</conf.main.directory>
+    <java.test.directory>src/test/java/</java.test.directory>
+    <conf.test.directory>src/test/resources</conf.test.directory>
 
     <base>org.metafactory.tutorial.example2</base>
 

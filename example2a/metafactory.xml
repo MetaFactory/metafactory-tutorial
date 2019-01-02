@@ -2,7 +2,7 @@
 <personal-iom-project xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/project http://www.firstbase.nl/xsd/personaliom/project.xsd" allowDeprecated="false" xmlns="http://www.firstbase.nl/xsd/personaliom/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <model>src/model/model2.xml</model>
   <pattern>src/pattern/pattern2a.xml</pattern>
-  <snippetsFolder>src/snippets/example2</snippetsFolder>
+  <snippetsFolder>src/snippets</snippetsFolder>
   <output>
     <path type="java">.</path>
     <path type="xml">../</path>
