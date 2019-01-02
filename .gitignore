@@ -6,3 +6,12 @@
 .idea
 metadata.xml
 generated
+example1/src/main/generated
+example1-with-expressions/src/main/generated
+example2a/src/main/generated
+example2b/src/main/generated
+example3/src/main/java
+example4/src/main/generated
+example5/src/main/generated
+example6/src/main/generated
+example7/src/main/generated

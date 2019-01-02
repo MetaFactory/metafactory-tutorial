@@ -45,11 +45,6 @@
                                 <goal>process</goal>
                             </goals>
                             <phase>generate-sources</phase>
-                            <configuration>
-                                <!-- source output directory
-                                -->
-                                <outputDirectory>generated/src/main</outputDirectory>
-                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
