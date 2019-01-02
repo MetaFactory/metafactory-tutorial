@@ -2,7 +2,7 @@
 <pattern xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://www.firstbase.nl/xsd/personaliom/pattern"
   xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd">
   <properties>
-    <java.output.directory>generated/src/main/generated</java.output.directory>
+    <java.output.directory>src/main/generated</java.output.directory>
     <name.of.class>HelloWorldWithExpressions</name.of.class>
     <business.class>Business1</business.class>
 
