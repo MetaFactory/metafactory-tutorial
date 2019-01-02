@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.firstbase.nl/xsd/personaliom/model" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/model http://www.firstbase.nl/xsd/personaliom/model.xsd">
+  <package name="domain_model">
+    <object name="Relation">
+      <properties>
+        <enum>false</enum>
+      </properties>
+      <reference name="type" type="RelationType" multiplicity="1..1" notnull="true" />
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false" />
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false" />
+    </object>
+    <object name="RelationType">
+      <properties>
+        <enum>true</enum>
+        <enum.constants>Private,Business</enum.constants>
+      </properties>
+    </object>
+    <object name="Person">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Persons</name.plural>
+      </properties>
+      <attribute name="firstName" type="String" notnull="true" length="40">
+        <properties />
+      </attribute>
+      <attribute name="middleName" type="String" notnull="false" length="10">
+        <properties />
+      </attribute>
+      <attribute name="lastName" type="String" notnull="true" length="60">
+        <properties />
+      </attribute>
+      <attribute name="birthDate" type="Date">
+        <properties />
+      </attribute>
+      <reference name="address" type="Address" multiplicity="0..n" notnull="false">
+        <properties />
+      </reference>
+      <reference name="phone" type="Phone" multiplicity="0..n" notnull="false">
+        <properties />
+      </reference>
+      <reference name="email" type="Email" multiplicity="0..n" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Company">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Companys</name.plural>
+      </properties>
+      <attribute name="name" type="String" notnull="true" length="120">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text">
+        <properties />
+      </attribute>
+      <reference name="address" type="Address" multiplicity="0..n" notnull="false">
+        <properties />
+      </reference>
+      <reference name="phone" type="Phone" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="email" type="Email" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Address">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Addresss</name.plural>
+      </properties>
+      <attribute name="streetName" type="String" notnull="true">
+        <properties>
+          <businesskey>2</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="zipCode" type="String">
+        <properties>
+          <businesskey>3</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="city" type="String" notnull="true">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="country" type="String">
+        <properties />
+      </attribute>
+      <attribute name="description" type="text">
+        <properties />
+      </attribute>
+      <reference name="type" type="AddressType" multiplicity="1..1" notnull="true">
+        <properties />
+      </reference>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Phone">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Phones</name.plural>
+      </properties>
+      <attribute name="number" type="String" notnull="true" length="20">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text" notnull="false" length="250">
+        <properties />
+      </attribute>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="Email">
+      <properties>
+        <enum>false</enum>
+        <name.plural>Emails</name.plural>
+      </properties>
+      <attribute name="emailAddress" type="String" notnull="true" length="80">
+        <properties>
+          <businesskey>1</businesskey>
+        </properties>
+      </attribute>
+      <attribute name="description" type="text" notnull="false" length="250">
+        <properties />
+      </attribute>
+      <reference name="person" type="Person" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+      <reference name="company" type="Company" multiplicity="0..1" notnull="false">
+        <properties />
+      </reference>
+    </object>
+    <object name="AddressType">
+      <properties>
+        <enum>false</enum>
+        <enum_use>true</enum_use>
+        <name.plural>AddressTypes</name.plural>
+      </properties>
+      <attribute name="key" type="String" notnull="true">
+        <properties>
+          <businesskey>1</businesskey>
+          <model.apicomment>Unique key</model.apicomment>
+        </properties>
+      </attribute>
+      <attribute name="qualifier" type="Integer" notnull="false">
+        <properties>
+          <model.apicomment>Numeric value used for sorting</model.apicomment>
+        </properties>
+      </attribute>
+    </object>
+  </package>
+</model>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <personal-iom-project xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/project http://www.firstbase.nl/xsd/personaliom/project.xsd" allowDeprecated="false" xmlns="http://www.firstbase.nl/xsd/personaliom/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <model>src/model/model-gti.xml</model>
-  <pattern>src/pattern/pattern-gti.xml</pattern>
+  <model>src/model/model.xml</model>
+  <pattern>src/pattern/pattern.xml</pattern>
   <snippetsFolder>src/snippets</snippetsFolder>
   <output>
     <path type="java">.</path>
@@ -9,23 +9,11 @@
     <path type="file">../</path>
   </output>
   <buildSets>
-    <buildSet name="pojo's">
-      <package name="org.metafactory.tutorial.example6.model.implementation"/>
-    </buildSet>
-    <buildSet name="dao's">
-      <package name="org.metafactory.tutorial.example6.cdi.dao"/>
-    </buildSet>
   </buildSets>
   <businessStyle>
-    <createDefaultJavaDocForClass>false</createDefaultJavaDocForClass>
+    <createDefaultJavaDocForClass>true</createDefaultJavaDocForClass>
     <addAuthorToDefaultJavaDocForClass>false</addAuthorToDefaultJavaDocForClass>
-    <createDefaultJavaDocForInterface>false</createDefaultJavaDocForInterface>
+    <createDefaultJavaDocForInterface>true</createDefaultJavaDocForInterface>
     <addAuthorToDefaultJavaDocForInterface>false</addAuthorToDefaultJavaDocForInterface>
-    <header>
-      <![CDATA[
-        Your header
-      ]]>
-
-    </header>
   </businessStyle>
 </personal-iom-project>

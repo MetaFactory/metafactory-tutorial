@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pattern xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.firstbase.nl/xsd/personaliom/pattern"
+  xsi:schemaLocation="http://www.firstbase.nl/xsd/personaliom/pattern http://www.firstbase.nl/xsd/personaliom/pattern.xsd"
+>
+  <properties>
+    <java.main.directory>generated/src/main/generated/</java.main.directory>
+    <conf.main.directory>generated/src/main/resources</conf.main.directory>
+    <java.test.directory>generated/src/test/java/</java.test.directory>
+    <conf.test.directory>generated/src/test/resources</conf.test.directory>
+
+    <generic.base.packagenames>org.metafactory.tutorial.example7</generic.base.packagenames>
+    <base>org.metafactory.tutorial.example7</base>
+    <product.keyword>tutorialExample7</product.keyword>
+
+    <model.implementation.package>${genpack}.model.implementation</model.implementation.package>
+    <model.implementation.class>${object.name}</model.implementation.class>
+    <model.implementation.reference>${reference.type}</model.implementation.reference>
+    <model.implementation.fqcn>${pattern.property.model.implementation.package}.${pattern.property.model.implementation.class}</model.implementation.fqcn>
+
+    <cdi.dao.package>${pattern.property.base}.cdi.dao</cdi.dao.package>
+
+    <!-- The pk property determines the name of the primary key -->
+    <pk>${firstLower(${object.name})}Id</pk>
+    <dao.getEntityManager>getEm()</dao.getEntityManager>
+
+    <create.combo.fill>false</create.combo.fill>
+
+  </properties>
+  <externalLibraries>
+    <externalLibrary name="lib1">
+      <path>../../metafactory-library</path>
+      <patternsFolder>pattern</patternsFolder>
+      <snippetsFolder>snippet</snippetsFolder>
+    </externalLibrary>
+  </externalLibraries>
+
+  <external.package id="lib1/package/pojo/model-jpa2.xml" path="${pattern.property.java.main.directory}" />
+  <external.package id="lib1/package/dao/jpa2-cdi-dao-beans.xml" path="${pattern.property.java.main.directory}" />
+
+</pattern>
